@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primeiro Projeto", "Primeir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caixa Eletrônico", "Caixa Eletrônico\Caixa Eletrônico.csproj", "{071CEEDF-55FD-4F54-AB3D-811009CF0EFA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bhaskara", "Bhaskara\Bhaskara.csproj", "{0D763750-E509-484E-8C2F-E1D60DCFCBEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{071CEEDF-55FD-4F54-AB3D-811009CF0EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{071CEEDF-55FD-4F54-AB3D-811009CF0EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{071CEEDF-55FD-4F54-AB3D-811009CF0EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D763750-E509-484E-8C2F-E1D60DCFCBEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D763750-E509-484E-8C2F-E1D60DCFCBEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D763750-E509-484E-8C2F-E1D60DCFCBEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D763750-E509-484E-8C2F-E1D60DCFCBEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
