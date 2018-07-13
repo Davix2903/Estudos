@@ -81,6 +81,17 @@ private void button1_Click_2(object sender, EventArgs e)
             }
             MessageBox.Show("A taxa da sua conta é de: " + taxa);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            double ValorInvestido = 200000.0;
+            for (int i = 1; i <= 12; i++) ;
+                {
+                ValorInvestido *= 1.01;
+                }
+            MessageBox.Show("O valor investido é: " + ValorInvestido);
+        }   
+        
     }
        
     }
