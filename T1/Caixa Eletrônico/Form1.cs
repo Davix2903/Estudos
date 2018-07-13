@@ -85,14 +85,26 @@ private void button1_Click_2(object sender, EventArgs e)
         private void button4_Click(object sender, EventArgs e)
         {
             double ValorInvestido = 200000.0;
-            for (int i = 1; i <= 12; i++) ;
+            for (int i = 1; i <= 12; i++)
                 {
                 ValorInvestido *= 1.01;
                 }
+            MessageBox.Show("O valor investido é: " + ValorInvestido); 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            double ValorInvestido = 200000.0;
+            int i = 1;
+            while(i <= 12)
+            {
+                ValorInvestido = ValorInvestido * 1.01;
+                i = i + 1;
+            }
             MessageBox.Show("O valor investido é: " + ValorInvestido);
-        }   
-        
+        }
+    }
     }
        
-    }
+    
 
