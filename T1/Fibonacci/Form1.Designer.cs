@@ -1,4 +1,4 @@
-﻿namespace Soma_dos_números_de_1_a_1000
+﻿namespace Fibonacci
 {
     partial class Form1
     {
@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 101);
+            this.button1.Location = new System.Drawing.Point(85, 66);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(534, 44);
+            this.button1.Size = new System.Drawing.Size(72, 31);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Soma de 1 a 1000";
+            this.button1.Text = "Calcular";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 306);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(331, 195);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Fibonacci";
             this.ResumeLayout(false);
 
         }

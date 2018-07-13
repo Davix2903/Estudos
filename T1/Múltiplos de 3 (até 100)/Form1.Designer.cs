@@ -1,4 +1,4 @@
-﻿namespace Soma_dos_números_de_1_a_1000
+﻿namespace Múltiplos_de_3__até_100_
 {
     partial class Form1
     {
@@ -33,11 +33,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 101);
+            this.button1.Location = new System.Drawing.Point(74, 36);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(534, 44);
+            this.button1.Size = new System.Drawing.Size(264, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Soma de 1 a 1000";
+            this.button1.Text = "Calcular os múltiplos de 3 (até 100)";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 306);
+            this.ClientSize = new System.Drawing.Size(415, 268);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";

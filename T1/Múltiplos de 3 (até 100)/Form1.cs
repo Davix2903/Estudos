@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Soma_dos_números_de_1_a_1000
+namespace Múltiplos_de_3__até_100_
 {
     public partial class Form1 : Form
     {
@@ -19,12 +19,17 @@ namespace Soma_dos_números_de_1_a_1000
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int soma1000 = 0;
-            for (int i = 0; i <= 1000; i++)
+
+            for (int i = 1; i <= 100; i = i + 1)
             {
-                soma1000 += i;
+                if (i % 3 == 0)
+                {
+                    MessageBox.Show("O número " + i + " é múltíplo de 3");
+                }
             }
-            MessageBox.Show("Resultado: " + soma1000);
+
+            }
+         
         }
     }
-}
+

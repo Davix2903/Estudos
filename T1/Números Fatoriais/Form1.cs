@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Soma_dos_números_de_1_a_1000
+namespace Números_Fatoriais
 {
     public partial class Form1 : Form
     {
@@ -19,12 +19,12 @@ namespace Soma_dos_números_de_1_a_1000
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int soma1000 = 0;
-            for (int i = 0; i <= 1000; i++)
+            int fatorial = 1;
+            for (int n = 1; n <= 10; n++)
             {
-                soma1000 += i;
+                fatorial = fatorial * n;
+                MessageBox.Show("fatorial (" + n + ") = " + fatorial);
             }
-            MessageBox.Show("Resultado: " + soma1000);
         }
     }
 }
