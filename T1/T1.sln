@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bhaskara", "Bhaskara\Bhaska
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Média das Idades", "Média das Idades\Média das Idades.csproj", "{1C7902CA-88CC-4CD6-B278-64CDBAFF60A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taxa de Manutenção", "Taxa de Manutenção\Taxa de Manutenção.csproj", "{ED679F99-A601-4CFB-8F04-D46A3F21F175}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1C7902CA-88CC-4CD6-B278-64CDBAFF60A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C7902CA-88CC-4CD6-B278-64CDBAFF60A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C7902CA-88CC-4CD6-B278-64CDBAFF60A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED679F99-A601-4CFB-8F04-D46A3F21F175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED679F99-A601-4CFB-8F04-D46A3F21F175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED679F99-A601-4CFB-8F04-D46A3F21F175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED679F99-A601-4CFB-8F04-D46A3F21F175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

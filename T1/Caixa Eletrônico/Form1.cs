@@ -32,16 +32,56 @@ private void button1_Click_2(object sender, EventArgs e)
         }
 
         private void button1_Click_3(object sender, EventArgs e)
+        {}
+
+        private void button1_Click_4(object sender, EventArgs e)
         {
             double saldo = 100.0;
             double valor = 10.0;
+            bool PodeSacar = (valor <= saldo) && (valor >= 0);
+            if (PodeSacar)
+            {
+                saldo = saldo - valor;
+                MessageBox.Show("Saque realizado com sucesso!");
+                MessageBox.Show("Saldo atual: " + saldo);
 
-            if (valor <= saldo) ;
-            saldo = saldo - valor;
-            MessageBox.Show("Saque realizado com sucesso!");
-            MessageBox.Show("Saldo atual: " + saldo);
+            }
+            else
+            {
 
-        }   else 
+                MessageBox.Show("Saldo insufisciente");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            double saldo = 100.0;
+            double valorDoSaque = 10.0;
+            double valorAposSaque = saldo - valorDoSaque;
+
+            MessageBox.Show("O saldo da conta após o saque é: " + valorAposSaque);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            double saldo = 0;
+            double taxa;
+
+            if (saldo < 1000)
+            {
+                taxa = 0.01;
+            }
+            else if (saldo <= 5000)
+            {
+                taxa = 0.05;
+            }
+            else
+            {
+                taxa = 0.1;
+            }
+            MessageBox.Show("A taxa da sua conta é de: " + taxa);
+        }
     }
+       
     }
 
