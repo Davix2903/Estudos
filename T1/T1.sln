@@ -23,7 +23,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci", "Fibonacci\Fibo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fors Encadeados", "Fors Encadeados\Fors Encadeados.csproj", "{FA236276-0F23-4532-AF05-BABA36541939}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mão na Massa", "Mão na Massa\Mão na Massa.csproj", "{234CC67F-2045-4C81-B88D-BC6AEC1C7A4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "☆ Mão na Massa", "Mão na Massa\☆ Mão na Massa.csproj", "{234CC67F-2045-4C81-B88D-BC6AEC1C7A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mão na Massa 02", "Mão na Massa 02\Mão na Massa 02.csproj", "{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{234CC67F-2045-4C81-B88D-BC6AEC1C7A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{234CC67F-2045-4C81-B88D-BC6AEC1C7A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{234CC67F-2045-4C81-B88D-BC6AEC1C7A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

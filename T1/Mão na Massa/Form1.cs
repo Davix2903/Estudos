@@ -33,19 +33,26 @@ namespace Mão_na_Massa
 
         private void button2_Click(object sender, EventArgs e)
         {
-            for (int i = 1; i <= 30; i = i+1)
+            for (int i = 1; i <= 30; i = i + 1)
             {
                 int NúmeroUm = 3;
                 int NúmeroDois = 4;
+                if (i % NúmeroUm != 0 && i % NúmeroDois != 0);
                 if (i % NúmeroUm == 0)
                 {
-                    MessageBox.Show("O número " + i + " é divisível por: " +NúmeroUm );
+                    MessageBox.Show("O número " + i + " é divisível por: " + NúmeroUm);
                 }
                 if (i % NúmeroDois == 0)
-                    {
-                        MessageBox.Show("O numero " + i + " é divisível por: " + NúmeroDois) ;
-                    }
+                {
+                    MessageBox.Show("O numero " + i + " é divisível por: " + NúmeroDois);
                 }
+
+                
+
+                
+
+                
             }
         }
     }
+}
