@@ -20,15 +20,14 @@ namespace Mão_na_Massa_02
         private void button1_Click(object sender, EventArgs e)
         {
             int soma = 0;
-            for (int i = 1; 1 <= 100; i = i + 1)
+            for (int i = 1; 1 <= 100; i++)
             {
-            if (i % 3 != 0)
+                if (i % 3 != 0)
                 {
-                soma += 1;
+                    soma += i;
                 }
-            MessageBox.Show("Resultado da soma: " + soma);
             }
-
+            MessageBox.Show("O total da soma é: " + soma);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,6 +41,19 @@ namespace Mão_na_Massa_02
                 }
             }
             MessageBox.Show("O total é: " + soma);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int soma = 0;
+            for (int i = 1; i <= 100; i = i + 1)
+            {
+                if (i % 3 != 0)
+                {
+                    soma += 1;
+                }
+            }
+            MessageBox.Show("O resultado da soma é: " + soma);
         }
     }
 }
