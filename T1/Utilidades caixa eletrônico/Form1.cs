@@ -61,8 +61,9 @@ namespace Utilidades_caixa_eletrônico
             guilherme.saldo = 1500.0;
             alessandro.saldo = 2000.0;
 
-            guilherme.Deposita (200);
-            MessageBox.Show("O atual da conta é: "+guilherme.saldo);
+            guilherme.Transfere (200, alessandro);
+            MessageBox.Show("O saldo atual da conta de Guilherme é: " + guilherme.saldo);
+            MessageBox.Show("O saldo atual da conta de Alessandro é: " + alessandro.saldo);
         }
     }
 }

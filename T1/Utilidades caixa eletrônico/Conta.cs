@@ -30,8 +30,8 @@ namespace Utilidades_caixa_eletrônico
 
         public void Transfere (double valor, Conta destino)
         {
-            this.saldo -= valor;
-            destino.saldo += valor;
+            this.Saca(valor);
+            destino.Deposita(valor);
         }
     }
 }
