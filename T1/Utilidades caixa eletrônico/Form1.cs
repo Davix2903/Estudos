@@ -19,13 +19,15 @@ namespace Utilidades_caixa_eletrônico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int numeroDaConta1 = 1;
-            string titularDaConta1 = "James Howlett";
-            double saldoDaConta1 = 2000.0;
+            Conta ContaCharles = new Conta();
+            ContaCharles.numero = 1;
+            ContaCharles.titular = "Charles Xavier";
+            ContaCharles.saldo = 5000.0;
 
-            int numeroDaConta2 = 2;
-            string titularDaConta2 = "Charles Xavier";
-            double saldoDaConta2 = 5000.0;
+            Conta ContaScott = new Conta();
+            ContaScott.numero = 2;
+            ContaScott.titular = "Scott Summers";
+            ContaScott.saldo = 2000.0;
         }
     }
 }
