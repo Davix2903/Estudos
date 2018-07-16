@@ -10,20 +10,44 @@ namespace Utilidades_caixa_eletrônico
     {
         public int numero;
 
-        public string titular;
+        public Cliente Titular;
 
         public double saldo;
 
-        public string cpf;
-
         public int agencia;
-
-        public void Saca(double valor)
+        public Conta(int Numero, double Saldo, int Agencia)
         {
-            this.saldo -= valor;
+            this.numero = Numero;
+            this.saldo = Saldo;
+            this.agencia = Agencia;
         }
 
-        public void Deposita(double valor)
+        public Conta() { }
+
+        public bool Saca(double valorASerSacado)
+        {
+            if (valorASerSacado > this.saldo || valorASerSacado < 0)
+            {
+
+                return false;
+            }
+            else
+            {
+                if (this.Titular.MaiorDeIdade())
+                {
+                    this.saldo -= valorASerSacado;
+
+                    return true;
+                }
+                else
+                {
+
+                }
+            }
+        }
+    }
+
+    public void Deposita(double valor)
         {
             this.saldo += valor;
         }
@@ -47,5 +71,5 @@ namespace Utilidades_caixa_eletrônico
 
             return rendimento;
         }
-    } 
+    }
 }

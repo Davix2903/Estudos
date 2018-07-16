@@ -19,22 +19,21 @@ namespace Utilidades_caixa_eletrônico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conta ContaCharles = new Conta();
-            ContaCharles.numero = 1;
-            ContaCharles.titular = "Charles Xavier";
-            ContaCharles.saldo = 5000.0;
-            ContaCharles.cpf = "111.111.111-11";
-            ContaCharles.agencia = 1;
+            Conta ContaCharles = new Conta(1, 5000.0, 111-1);
+            Cliente clienteCharles = new Cliente("Charles", "111.111.111", "Rua Aparecida", "111.111.111-11", 17);
+            ContaCharles.Titular = clienteCharles;
 
-            Conta ContaScott = new Conta();
-            ContaScott.numero = 2;
-            ContaScott.titular = "Scott Summers";
-            ContaScott.saldo = 2000.0;
-            ContaScott.cpf = "222.222.222-22";
-            ContaScott.agencia = 2;
+            Conta ContaScott = new Conta(2, 200, 222-2);
+            Cliente clienteScott = new Cliente("Scott", "222.222.222", "Rua Itajaí", "222.222.222-22", 18);
+            ContaScott.Titular = clienteScott;
 
-            MessageBox.Show("O titular da conta 1 é: " + ContaCharles.titular + " CPF: " +ContaCharles.cpf + " Agência: " +ContaCharles.agencia);
-            MessageBox.Show("O titular da conta 2 é: " + ContaScott.titular + " CPF: " + ContaScott.cpf + " Agência: " + ContaScott.agencia);
+            Conta contaJames = new Conta(1, 500.0, 333 - 3);
+            Cliente clienteJames = new Cliente("James", "526.259.547.25", "Rua itajaí", "256.321.654-96", 19);
+            contaJames.Titular = clienteJames;
+
+            MessageBox.Show("O titular da conta 1 é: " + ContaCharles.Titular.nome + ", CPF: " + ContaCharles.Titular.cpf + ", Agência: " +ContaCharles.agencia + ", Idade: " + ContaCharles.Titular.idade);
+            MessageBox.Show("O titular da conta 2 é: " + ContaScott.Titular.nome + ", CPF: " + ContaScott.Titular.cpf + ", Agência: " + ContaScott.agencia + ", Idade: " + ContaScott.Titular.idade);
+            MessageBox.Show("O titular da conta 3 é: " + contaJames.Titular.nome + ", CPF: " + contaJames.Titular.cpf + ", Agência: " + contaJames.agencia + ", Idade: " + contaJames.Titular.idade);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -44,13 +43,7 @@ namespace Utilidades_caixa_eletrônico
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Conta ContaJames = new Conta();
-            ContaJames.numero = 3;
-            ContaJames.titular = "James Howlett";
-            ContaJames.saldo = 100.0;
-            ContaJames.cpf = "333.333.333-33";
-            ContaJames.agencia = 3;
-            MessageBox.Show("O titular da conta 3 é: " + ContaJames.titular);
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -73,6 +66,11 @@ namespace Utilidades_caixa_eletrônico
             MessageBox.Show(".." + mauricio.saldo);
             double rendimentoDoMauricio = mauricio.CalculaRendimentoAnual();
             MessageBox.Show("Rendimento anual de mauricio: R$ " + rendimentoDoMauricio);
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
 
         }
     }
