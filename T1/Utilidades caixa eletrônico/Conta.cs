@@ -28,10 +28,24 @@ namespace Utilidades_caixa_eletrônico
             this.saldo += valor;
         }
 
-        public void Transfere (double valor, Conta destino)
+        public void Transfere(double valor, Conta destino)
         {
             this.Saca(valor);
             destino.Deposita(valor);
         }
-    }
+
+        public double CalculaRendimentoAnual()
+        {
+            double saldoNaqueleMes = this.saldo;
+
+            for (int i = 0; i < 12; i++)
+            {
+                saldoNaqueleMes = saldoNaqueleMes * 1.007;
+            }
+
+            double rendimento = saldoNaqueleMes - this.saldo;
+
+            return rendimento;
+        }
+    } 
 }

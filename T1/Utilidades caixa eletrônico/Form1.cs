@@ -65,5 +65,15 @@ namespace Utilidades_caixa_eletrônico
             MessageBox.Show("O saldo atual da conta de Guilherme é: " + guilherme.saldo);
             MessageBox.Show("O saldo atual da conta de Alessandro é: " + alessandro.saldo);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Conta mauricio = new Conta();
+            mauricio.Deposita(800);
+            MessageBox.Show(".." + mauricio.saldo);
+            double rendimentoDoMauricio = mauricio.CalculaRendimentoAnual();
+            MessageBox.Show("Rendimento anual de mauricio: R$ " + rendimentoDoMauricio);
+
+        }
     }
 }
