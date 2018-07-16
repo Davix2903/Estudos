@@ -27,5 +27,11 @@ namespace Utilidades_caixa_eletrônico
         {
             this.saldo += valor;
         }
+
+        public void Transfere (double valor, Conta destino)
+        {
+            this.saldo -= valor;
+            destino.saldo += valor;
+        }
     }
 }
