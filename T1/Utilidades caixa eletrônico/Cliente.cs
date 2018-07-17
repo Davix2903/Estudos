@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Utilidades_caixa_eletrônico
 {
-    class Cliente
+    public class Cliente
     {
         public string nome;
 
@@ -32,6 +32,6 @@ namespace Utilidades_caixa_eletrônico
             this.idade = Idade;
         }
 
-        public Cliente() { }
+        public Cliente () { }
     }
 }

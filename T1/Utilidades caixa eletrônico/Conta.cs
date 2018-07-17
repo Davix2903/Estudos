@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace Utilidades_caixa_eletrônico
 {
-    class Conta
+    public class Conta
     {
-        public int numero { get; set; }
+        public int Numero { get; set; }
 
         public Cliente Titular { get; set; }
 
-        public double Saldo { get; private set; }
+        public double Saldo { get; set; }
 
-        public int agencia;
-        public Conta(int Numero, double saldo, int Agencia)
+        public int Agencia { get; set; }
+        public Conta(int numero, double saldo, int agencia)
         {
-            this.numero = Numero;
+            this.Numero = numero;
             this.Saldo = saldo;
-            this.agencia = Agencia;
+            this.Agencia = agencia;
         }
 
         public Conta() { }

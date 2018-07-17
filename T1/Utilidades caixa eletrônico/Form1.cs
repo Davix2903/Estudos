@@ -31,9 +31,9 @@ namespace Utilidades_caixa_eletrônico
             Cliente clienteJames = new Cliente("James", "526.259.547.25", "Rua itajaí", "256.321.654-96", 19);
             contaJames.Titular = clienteJames;
 
-            MessageBox.Show("O titular da conta 1 é: " + ContaCharles.Titular.nome + ", CPF: " + ContaCharles.Titular.cpf + ", Agência: " +ContaCharles.agencia + ", Idade: " + ContaCharles.Titular.idade);
-            MessageBox.Show("O titular da conta 2 é: " + ContaScott.Titular.nome + ", CPF: " + ContaScott.Titular.cpf + ", Agência: " + ContaScott.agencia + ", Idade: " + ContaScott.Titular.idade);
-            MessageBox.Show("O titular da conta 3 é: " + contaJames.Titular.nome + ", CPF: " + contaJames.Titular.cpf + ", Agência: " + contaJames.agencia + ", Idade: " + contaJames.Titular.idade);
+            MessageBox.Show("O titular da conta 1 é: " + ContaCharles.Titular.nome + ", CPF: " + ContaCharles.Titular.cpf + ", Agência: " +ContaCharles.Agencia + ", Idade: " + ContaCharles.Titular.idade);
+            MessageBox.Show("O titular da conta 2 é: " + ContaScott.Titular.nome + ", CPF: " + ContaScott.Titular.cpf + ", Agência: " + ContaScott.Agencia + ", Idade: " + ContaScott.Titular.idade);
+            MessageBox.Show("O titular da conta 3 é: " + contaJames.Titular.nome + ", CPF: " + contaJames.Titular.cpf + ", Agência: " + contaJames.Agencia + ", Idade: " + contaJames.Titular.idade);
         
         }
 
@@ -50,7 +50,38 @@ namespace Utilidades_caixa_eletrônico
 
         private void button2_Click(object sender, EventArgs e)
         {
-          
+            Conta contaAmanda = new Conta();
+            Cliente clienteAmanda = new Cliente("Amanda", "rg", "Rua Joinville", "111.111.111-11", 25);
+            contaAmanda.Titular = clienteAmanda;
+            contaAmanda.Numero = 99;
+            contaAmanda.Agencia = 999-0;
+            contaAmanda.Saldo = 50.0;
+            contaAmanda.Titular.nome = "Amanda";
+
+            contaAmanda.Saca(9.0);
+            contaAmanda.Deposita(10.0);
+
+            MessageBox.Show("O saldo da conta de " + contaAmanda.Titular.nome + ", é: " + contaAmanda.Saldo);
+         
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente("Guilherme Silveira", "rg", "Rua Bahia", "123.456.789-12", 18);
+
+        }
+
+        private void TitularBox_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Conta conta = new Conta();
+            Cliente cliente = new Cliente();
+            conta.Titular = cliente;
+            conta.Titular.nome = "Amanda";
+            TitularBox.Text = cliente.nome;
         }
     }
 }
