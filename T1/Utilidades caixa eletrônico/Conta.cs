@@ -12,13 +12,13 @@ namespace Utilidades_caixa_eletrônico
 
         public Cliente Titular;
 
-        public double saldo;
+        public double Saldo;
 
         public int agencia;
-        public Conta(int Numero, double Saldo, int Agencia)
+        public Conta(int Numero, double saldo, int Agencia)
         {
             this.numero = Numero;
-            this.saldo = Saldo;
+            this.Saldo = saldo;
             this.agencia = Agencia;
         }
 
@@ -26,7 +26,7 @@ namespace Utilidades_caixa_eletrônico
 
         public bool Saca(double valorASerSacado)
         {
-            if (valorASerSacado > this.saldo || valorASerSacado < 0)
+            if (valorASerSacado > this.Saldo || valorASerSacado < 0)
             {
 
                 return false;
@@ -35,41 +35,40 @@ namespace Utilidades_caixa_eletrônico
             {
                 if (this.Titular.MaiorDeIdade())
                 {
-                    this.saldo -= valorASerSacado;
+                    this.Saldo -= valorASerSacado;
 
                     return true;
                 }
                 else
                 {
-
+                    return false;
                 }
             }
         }
-    }
 
-    public void Deposita(double valor)
-        {
-            this.saldo += valor;
-        }
 
-        public void Transfere(double valor, Conta destino)
+
+
+
+        public void Deposita(double valor)
         {
-            this.Saca(valor);
-            destino.Deposita(valor);
+            this.Saldo += valor;
         }
 
         public double CalculaRendimentoAnual()
         {
-            double saldoNaqueleMes = this.saldo;
+            double saldoNaqueleMes = this.Saldo;
 
             for (int i = 0; i < 12; i++)
             {
                 saldoNaqueleMes = saldoNaqueleMes * 1.007;
             }
 
-            double rendimento = saldoNaqueleMes - this.saldo;
+            double rendimento = saldoNaqueleMes - this.Saldo;
 
             return rendimento;
         }
+
     }
 }
+
