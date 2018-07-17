@@ -8,11 +8,11 @@ namespace Utilidades_caixa_eletrônico
 {
     class Conta
     {
-        public int numero;
+        public int numero { get; set; }
 
-        public Cliente Titular;
+        public Cliente Titular { get; set; }
 
-        public double Saldo;
+        public double Saldo { get; private set; }
 
         public int agencia;
         public Conta(int Numero, double saldo, int Agencia)
@@ -24,35 +24,21 @@ namespace Utilidades_caixa_eletrônico
 
         public Conta() { }
 
-        public bool Saca(double valorASerSacado)
+        public void Saca(double valor)
         {
-            if (valorASerSacado > this.Saldo || valorASerSacado < 0)
-            {
-
-                return false;
-            }
-            else
-            {
-                if (this.Titular.MaiorDeIdade())
-                {
-                    this.Saldo -= valorASerSacado;
-
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
+            this.Saldo -= valor;
         }
-
-
-
-
 
         public void Deposita(double valor)
         {
             this.Saldo += valor;
+        }
+
+        public void Transfere(double valor, Conta destino)
+        {
+            this.Saca(valor);
+            destino.Deposita(valor);
+
         }
 
         public double CalculaRendimentoAnual()

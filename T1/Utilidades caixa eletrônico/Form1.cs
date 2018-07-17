@@ -34,22 +34,9 @@ namespace Utilidades_caixa_eletrônico
             MessageBox.Show("O titular da conta 1 é: " + ContaCharles.Titular.nome + ", CPF: " + ContaCharles.Titular.cpf + ", Agência: " +ContaCharles.agencia + ", Idade: " + ContaCharles.Titular.idade);
             MessageBox.Show("O titular da conta 2 é: " + ContaScott.Titular.nome + ", CPF: " + ContaScott.Titular.cpf + ", Agência: " + ContaScott.agencia + ", Idade: " + ContaScott.Titular.idade);
             MessageBox.Show("O titular da conta 3 é: " + contaJames.Titular.nome + ", CPF: " + contaJames.Titular.cpf + ", Agência: " + contaJames.agencia + ", Idade: " + contaJames.Titular.idade);
-
+        
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -61,27 +48,9 @@ namespace Utilidades_caixa_eletrônico
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-                Conta contaGuilherme = new Conta();
-                contaGuilherme.numero = 1;
-                contaGuilherme.Saldo = 1500.0;
-
-                Cliente clienteGuilherme = new Cliente();
-                clienteGuilherme.nome = "Guilherme";
-                clienteGuilherme.idade = 17;
-
-                contaGuilherme.Titular = clienteGuilherme;
-
-                bool sacou = contaGuilherme.Saca(300.0);
-                if (sacou)
-                {
-                    MessageBox.Show("Saldo da Conta do Guilherme após saque: " + contaGuilherme.Saldo);
-                }
-                else
-                {
-                    MessageBox.Show("Não foi possível sacar da conta do Guilherme");
-                }
-            }
+          
         }
     }
+}
