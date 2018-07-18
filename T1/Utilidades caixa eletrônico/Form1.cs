@@ -11,9 +11,17 @@ using System.Windows.Forms;
 namespace Utilidades_caixa_eletrônico
 {
     public partial class Form1 : Form
-
     {
-        Conta guilherme;
+        private void MostraConta()
+        {
+
+            textoTitular.Text = contaVictor.Titular.nome;
+            textoSaldo.Text = Convert.ToString(contaVictor.Saldo);
+            textoNumero.Text = Convert.ToString(contaVictor.Numero);
+        }
+        Conta contaVictor;
+        Cliente clienteVictor;
+
         public Form1()
         {
             InitializeComponent();
@@ -38,69 +46,34 @@ namespace Utilidades_caixa_eletrônico
             MessageBox.Show("O titular da conta 3 é: " + contaJames.Titular.nome + ", CPF: " + contaJames.Titular.cpf + ", Agência: " + contaJames.Agencia + ", Idade: " + contaJames.Titular.idade);
         
         }
-
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Conta mauricio = new Conta();
-            mauricio.Deposita(800);
-            MessageBox.Show(".." + mauricio.Saldo);
-            double rendimentoDoMauricio = mauricio.CalculaRendimentoAnual();
-            MessageBox.Show("Rendimento anual de mauricio: R$ " + rendimentoDoMauricio);
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Conta contaAmanda = new Conta();
-            Cliente clienteAmanda = new Cliente("Amanda", "rg", "Rua Joinville", "111.111.111-11", 25);
-            contaAmanda.Titular = clienteAmanda;
-            contaAmanda.Numero = 99;
-            contaAmanda.Agencia = 999-0;
-            contaAmanda.Saldo = 50.0;
-            contaAmanda.Titular.nome = "Amanda";
-
-            contaAmanda.Saca(9.0);
-            contaAmanda.Deposita(10.0);
-
-            MessageBox.Show("O saldo da conta de " + contaAmanda.Titular.nome + ", é: " + contaAmanda.Saldo);
-         
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Cliente cliente = new Cliente("Guilherme Silveira", "rg", "Rua Bahia", "123.456.789-12", 18);
-
-        }
-
-        private void TitularBox_TextChanged(object sender, EventArgs e)
-        {
-        }
-
+  
         private void Form1_Load(object sender, EventArgs e)
         {
-            Conta contaVictor = new Conta(1, 11.0, 111-0);
-            Cliente clienteVictor = new Cliente("Victor", "rg", "Rua Paraná", "111.111.111-11", 18);
-            contaVictor.Titular = clienteVictor;
-            textoTitular.Text = contaVictor.Titular.nome;
 
-            guilherme = new Conta();
+           contaVictor = new Conta(1, 250.0, 111-0);
+           clienteVictor = new Cliente("Victor", "", "Rua Paraná", "111.111.111-11", 18);
+           contaVictor.Titular = clienteVictor;
+           contaVictor.Titular.nome = clienteVictor.nome;
+
+            this.MostraConta();
 
 
-            textoTitular.Text = Convert.ToString(10);
-            string valor = "sp";
-            string valorConvertido = Convert.ToString(valor);
-            textoTitular.Text = valorConvertido;
+        }
+
+        private void textoNumero_TextChanged(object sender, EventArgs e)
+        {
         }
 
         private void textoTitular_TextChanged(object sender, EventArgs e)
         {
-
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            guilherme
+            string textoDoValorDoDeposito = textoValor.Text;
+            double valorDeposito = Convert.ToDouble(textoDoValorDoDeposito);
+            this.contaVictor.Deposita(valorDeposito);
+            this.MostraConta();
         }
     }
 }
