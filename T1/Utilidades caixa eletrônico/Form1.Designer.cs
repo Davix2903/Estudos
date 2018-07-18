@@ -32,7 +32,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.TitularBox = new System.Windows.Forms.TextBox();
+            this.textoTitular = new System.Windows.Forms.TextBox();
+            this.textoSaldo = new System.Windows.Forms.TextBox();
+            this.textoNumero = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -75,20 +78,47 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // TitularBox
+            // textoTitular
             // 
-            this.TitularBox.Location = new System.Drawing.Point(520, 12);
-            this.TitularBox.Name = "TitularBox";
-            this.TitularBox.Size = new System.Drawing.Size(268, 20);
-            this.TitularBox.TabIndex = 6;
-            this.TitularBox.TextChanged += new System.EventHandler(this.TitularBox_TextChanged);
+            this.textoTitular.Location = new System.Drawing.Point(657, 12);
+            this.textoTitular.Name = "textoTitular";
+            this.textoTitular.Size = new System.Drawing.Size(131, 20);
+            this.textoTitular.TabIndex = 6;
+            this.textoTitular.TextChanged += new System.EventHandler(this.textoTitular_TextChanged);
+            // 
+            // textoSaldo
+            // 
+            this.textoSaldo.Location = new System.Drawing.Point(657, 39);
+            this.textoSaldo.Name = "textoSaldo";
+            this.textoSaldo.Size = new System.Drawing.Size(131, 20);
+            this.textoSaldo.TabIndex = 7;
+            // 
+            // textoNumero
+            // 
+            this.textoNumero.Location = new System.Drawing.Point(657, 66);
+            this.textoNumero.Name = "textoNumero";
+            this.textoNumero.Size = new System.Drawing.Size(131, 20);
+            this.textoNumero.TabIndex = 8;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(370, 183);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 286);
-            this.Controls.Add(this.TitularBox);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textoNumero);
+            this.Controls.Add(this.textoSaldo);
+            this.Controls.Add(this.textoTitular);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
@@ -107,7 +137,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox TitularBox;
+        private System.Windows.Forms.TextBox textoTitular;
+        private System.Windows.Forms.TextBox textoSaldo;
+        private System.Windows.Forms.TextBox textoNumero;
+        private System.Windows.Forms.Button button5;
     }
 }
 

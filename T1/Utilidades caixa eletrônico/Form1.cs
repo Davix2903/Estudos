@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace Utilidades_caixa_eletrônico
 {
     public partial class Form1 : Form
+
     {
+        Conta guilherme;
         public Form1()
         {
             InitializeComponent();
@@ -77,11 +79,28 @@ namespace Utilidades_caixa_eletrônico
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Conta conta = new Conta();
-            Cliente cliente = new Cliente();
-            conta.Titular = cliente;
-            conta.Titular.nome = "Amanda";
-            TitularBox.Text = cliente.nome;
+            Conta contaVictor = new Conta(1, 11.0, 111-0);
+            Cliente clienteVictor = new Cliente("Victor", "rg", "Rua Paraná", "111.111.111-11", 18);
+            contaVictor.Titular = clienteVictor;
+            textoTitular.Text = contaVictor.Titular.nome;
+
+            guilherme = new Conta();
+
+
+            textoTitular.Text = Convert.ToString(10);
+            string valor = "sp";
+            string valorConvertido = Convert.ToString(valor);
+            textoTitular.Text = valorConvertido;
+        }
+
+        private void textoTitular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            guilherme
         }
     }
 }

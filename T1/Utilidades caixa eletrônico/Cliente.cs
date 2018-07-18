@@ -31,7 +31,12 @@ namespace Utilidades_caixa_eletrônico
             this.cpf = Cpf;
             this.idade = Idade;
         }
-
         public Cliente () { }
+
+        public Cliente(string Nome)
+        {
+            this.nome = Nome;
+        }
+
     }
 }
