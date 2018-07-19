@@ -36,16 +36,6 @@ namespace Utilidades_caixa_eletrônico
            contaVictor.Titular.nome = clienteVictor.nome;
 
             this.MostraConta();
-
-
-        }
-
-        private void textoNumero_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textoTitular_TextChanged(object sender, EventArgs e)
-        {
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -64,33 +54,6 @@ namespace Utilidades_caixa_eletrônico
             this.MostraConta();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            ContaPoupanca cp = new ContaPoupanca();
-            cp.Deposita(100.0);
-            cp.Saca(50);
-
-            Conta c = new Conta();
-            c.Deposita(10.0);
-            c.Saca(5.0);
-
-            MessageBox.Show("Saldo:" + cp.Saldo);
-            MessageBox.Show("Saldo:" + c.Saldo);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Conta c1 = new Conta();
-            c1.Deposita(15.0);
-            ContaPoupanca c2 = new ContaPoupanca();
-            c2.Deposita(150.0);
-
-            TotalizadorDeContas t = new TotalizadorDeContas();
-            t.Adiciona(c1);
-
-            MessageBox.Show("O total é: " + t.Total);
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             Conta[] contas = new Conta[2];
@@ -103,12 +66,16 @@ namespace Utilidades_caixa_eletrônico
             {
                 MessageBox.Show("O saldo da conta é: " + contas[i].Saldo);
             }
-            
+
             /*foreach (Conta conta in contas)
             {
             }
             */
         }
 
+        private void textoTitular_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
