@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textoTitular = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textoSaldo
@@ -124,20 +124,20 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox1
+            // textoTitular
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(89, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 21);
-            this.comboBox1.TabIndex = 17;
+            this.textoTitular.FormattingEnabled = true;
+            this.textoTitular.Location = new System.Drawing.Point(89, 31);
+            this.textoTitular.Name = "textoTitular";
+            this.textoTitular.Size = new System.Drawing.Size(185, 21);
+            this.textoTitular.TabIndex = 17;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 484);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textoTitular);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -165,7 +165,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox textoTitular;
     }
 }
 
