@@ -12,7 +12,7 @@ namespace Utilidades_caixa_eletrônico
 
         public Cliente Titular { get; set; }
 
-        public double Saldo { get; set; }
+        public double Saldo { get; protected set; }
 
         public int Agencia { get; set; }
         public Conta(int numero, double saldo, int agencia)
@@ -24,9 +24,13 @@ namespace Utilidades_caixa_eletrônico
 
         public Conta() { }
 
-        public void Saca(double valor)
+        public virtual void Saca(double valor)
         {
-            this.Saldo -= valor;
+            if (valor <= Saldo)
+            {
+
+                this.Saldo -= valor;
+            }
         }
 
         public void Deposita(double valor)

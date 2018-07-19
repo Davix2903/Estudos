@@ -75,5 +75,40 @@ namespace Utilidades_caixa_eletrônico
             this.contaVictor.Deposita(valorDeposito);
             this.MostraConta();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string textoDoValorDoSaque = textoValor.Text;
+            double valorSaque = Convert.ToDouble(textoDoValorDoSaque);
+            this.contaVictor.Saca(valorSaque);
+            this.MostraConta();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ContaPoupanca cp = new ContaPoupanca();
+            cp.Deposita(100.0);
+            cp.Saca(50);
+
+            Conta c = new Conta();
+            c.Deposita(10.0);
+            c.Saca(5.0);
+
+            MessageBox.Show("Saldo:" + cp.Saldo);
+            MessageBox.Show("Saldo:" + c.Saldo);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Conta c1 = new Conta();
+            c1.Deposita(15.0);
+            ContaPoupanca c2 = new ContaPoupanca();
+            c2.Deposita(150.0);
+
+            TotalizadorDeContas t = new TotalizadorDeContas();
+            t.Adiciona(c1);
+
+            MessageBox.Show("O total é: " + t.Total);
+        }
     }
 }

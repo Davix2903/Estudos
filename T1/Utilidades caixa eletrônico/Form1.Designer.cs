@@ -38,15 +38,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(23, 258);
+            this.button1.Location = new System.Drawing.Point(89, 303);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 23);
+            this.button1.Size = new System.Drawing.Size(185, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "Orientação a objetos (Informações sobre três contas)";
             this.button1.UseVisualStyleBackColor = false;
@@ -55,17 +58,17 @@
             // textoSaldo
             // 
             this.textoSaldo.ForeColor = System.Drawing.Color.Red;
-            this.textoSaldo.Location = new System.Drawing.Point(90, 135);
+            this.textoSaldo.Location = new System.Drawing.Point(89, 83);
             this.textoSaldo.Name = "textoSaldo";
-            this.textoSaldo.Size = new System.Drawing.Size(131, 20);
+            this.textoSaldo.Size = new System.Drawing.Size(185, 20);
             this.textoSaldo.TabIndex = 7;
             // 
             // textoNumero
             // 
             this.textoNumero.ForeColor = System.Drawing.Color.Red;
-            this.textoNumero.Location = new System.Drawing.Point(90, 83);
+            this.textoNumero.Location = new System.Drawing.Point(89, 135);
             this.textoNumero.Name = "textoNumero";
-            this.textoNumero.Size = new System.Drawing.Size(131, 20);
+            this.textoNumero.Size = new System.Drawing.Size(185, 20);
             this.textoNumero.TabIndex = 8;
             this.textoNumero.TextChanged += new System.EventHandler(this.textoNumero_TextChanged);
             // 
@@ -73,27 +76,27 @@
             // 
             this.textoTitular.BackColor = System.Drawing.Color.White;
             this.textoTitular.ForeColor = System.Drawing.Color.Red;
-            this.textoTitular.Location = new System.Drawing.Point(90, 31);
+            this.textoTitular.Location = new System.Drawing.Point(89, 32);
             this.textoTitular.Name = "textoTitular";
-            this.textoTitular.Size = new System.Drawing.Size(131, 20);
+            this.textoTitular.Size = new System.Drawing.Size(185, 20);
             this.textoTitular.TabIndex = 9;
             this.textoTitular.TextChanged += new System.EventHandler(this.textoTitular_TextChanged);
             // 
             // textoValor
             // 
             this.textoValor.ForeColor = System.Drawing.Color.Red;
-            this.textoValor.Location = new System.Drawing.Point(90, 187);
+            this.textoValor.Location = new System.Drawing.Point(89, 187);
             this.textoValor.Name = "textoValor";
-            this.textoValor.Size = new System.Drawing.Size(131, 20);
+            this.textoValor.Size = new System.Drawing.Size(185, 20);
             this.textoValor.TabIndex = 10;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(90, 213);
+            this.button2.Location = new System.Drawing.Point(89, 213);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 23);
+            this.button2.Size = new System.Drawing.Size(89, 23);
             this.button2.TabIndex = 11;
             this.button2.Text = "Depositar";
             this.button2.UseVisualStyleBackColor = false;
@@ -135,11 +138,50 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Valor para depósito:";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(185, 213);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 23);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Sacar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(89, 274);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(89, 23);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Herança";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.ForeColor = System.Drawing.Color.Red;
+            this.button5.Location = new System.Drawing.Point(185, 274);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(89, 23);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Polimorfismo";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 345);
+            this.ClientSize = new System.Drawing.Size(376, 345);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -170,6 +212,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
