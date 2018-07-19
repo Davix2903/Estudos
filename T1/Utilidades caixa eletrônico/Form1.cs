@@ -110,5 +110,25 @@ namespace Utilidades_caixa_eletrônico
 
             MessageBox.Show("O total é: " + t.Total);
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Conta[] contas = new Conta[2];
+            contas[0] = new Conta();
+            contas[1] = new ContaPoupanca();
+
+            contas[0].Deposita(10.0);
+            contas[1].Deposita(100.0);
+            for (int i = 0; i < contas.Length; i++)
+            {
+                MessageBox.Show("O saldo da conta é: " + contas[i].Saldo);
+            }
+            
+            /*foreach (Conta conta in contas)
+            {
+            }
+            */
+        }
+
     }
 }
