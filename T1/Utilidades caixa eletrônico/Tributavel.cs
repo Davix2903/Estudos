@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Utilidades_caixa_eletrônico
 {
-    class ContaCorrente : Conta
+    interface Tributavel
     {
-
+        double CalculaTributo();
     }
 }

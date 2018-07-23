@@ -146,9 +146,14 @@ namespace Utilidades_caixa_eletrônico
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ContaCorrente contaCorrente = new ContaCorrente();
-            ContaPoupanca contaPoupanca = new ContaPoupanca();
-
-        }
+            ContaInvestimento ci = new ContaInvestimento();
+            ci.Deposita(50.0);
+            ContaPoupanca cp = new ContaPoupanca();
+            cp.Deposita(100.0);
+            TotalizadordeTributos t = new TotalizadordeTributos();
+            t.Acumula(cp);
+            t.Acumula(cp);
+            MessageBox.Show("Tributos: " + t.Total);
+        }   
     }
 }

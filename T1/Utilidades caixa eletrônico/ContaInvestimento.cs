@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace Utilidades_caixa_eletrônico
 {
-    class ContaCorrente : Conta
+    class ContaInvestimento : Conta, Tributavel
     {
 
+        public double CalculaTributo()
+        {
+            return this.Saldo * 0.03;
+        }
     }
 }

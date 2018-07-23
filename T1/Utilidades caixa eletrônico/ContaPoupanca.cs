@@ -12,5 +12,10 @@ namespace Utilidades_caixa_eletrônico
         {
             this.Saldo -= (valor + 0.1);
         }
+
+        public double CalculaTributo()
+        {
+            return this.Saldo * 0.02;
+        }
     }
 }
