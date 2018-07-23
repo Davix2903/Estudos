@@ -35,9 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.textoTitular = new System.Windows.Forms.ComboBox();
+            this.comboContas = new System.Windows.Forms.ComboBox();
+            this.textotitulare = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboTransfere = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textoSaldo
@@ -59,16 +63,17 @@
             // textoValor
             // 
             this.textoValor.ForeColor = System.Drawing.Color.Red;
-            this.textoValor.Location = new System.Drawing.Point(89, 187);
+            this.textoValor.Location = new System.Drawing.Point(90, 239);
             this.textoValor.Name = "textoValor";
-            this.textoValor.Size = new System.Drawing.Size(185, 20);
+            this.textoValor.Size = new System.Drawing.Size(184, 20);
             this.textoValor.TabIndex = 10;
+            this.textoValor.TextChanged += new System.EventHandler(this.textoValor_TextChanged);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(89, 213);
+            this.button2.Location = new System.Drawing.Point(90, 265);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 23);
             this.button2.TabIndex = 11;
@@ -103,43 +108,85 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Número da conta:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(87, 171);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Valor para depósito:";
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(185, 213);
+            this.button3.Location = new System.Drawing.Point(186, 265);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 23);
+            this.button3.Size = new System.Drawing.Size(88, 23);
             this.button3.TabIndex = 16;
             this.button3.Text = "Sacar";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textoTitular
+            // comboContas
             // 
-            this.textoTitular.FormattingEnabled = true;
-            this.textoTitular.Location = new System.Drawing.Point(89, 31);
-            this.textoTitular.Name = "textoTitular";
-            this.textoTitular.Size = new System.Drawing.Size(185, 21);
-            this.textoTitular.TabIndex = 17;
+            this.comboContas.FormattingEnabled = true;
+            this.comboContas.Location = new System.Drawing.Point(89, 31);
+            this.comboContas.Name = "comboContas";
+            this.comboContas.Size = new System.Drawing.Size(185, 21);
+            this.comboContas.TabIndex = 17;
+            this.comboContas.SelectedIndexChanged += new System.EventHandler(this.comboContas_SelectedIndexChanged);
+            // 
+            // textotitulare
+            // 
+            this.textotitulare.Location = new System.Drawing.Point(90, 184);
+            this.textotitulare.Name = "textotitulare";
+            this.textotitulare.Size = new System.Drawing.Size(184, 20);
+            this.textotitulare.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(86, 168);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Titular:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(90, 220);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Valor:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(280, 265);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Transferir";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboTransfere
+            // 
+            this.comboTransfere.FormattingEnabled = true;
+            this.comboTransfere.Location = new System.Drawing.Point(280, 238);
+            this.comboTransfere.Name = "comboTransfere";
+            this.comboTransfere.Size = new System.Drawing.Size(122, 21);
+            this.comboTransfere.TabIndex = 23;
+            this.comboTransfere.SelectedIndexChanged += new System.EventHandler(this.comboTransfere_SelectedIndexChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(376, 484);
-            this.Controls.Add(this.textoTitular);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(505, 484);
+            this.Controls.Add(this.comboTransfere);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textotitulare);
+            this.Controls.Add(this.comboContas);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -163,9 +210,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox textoTitular;
+        private System.Windows.Forms.ComboBox comboContas;
+        private System.Windows.Forms.TextBox textotitulare;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboTransfere;
     }
 }
 

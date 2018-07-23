@@ -37,6 +37,5 @@ namespace Utilidades_caixa_eletrônico
         {
             this.nome = Nome;
         }
-
     }
 }
