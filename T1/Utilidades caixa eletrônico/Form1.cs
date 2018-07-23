@@ -143,5 +143,11 @@ namespace Utilidades_caixa_eletrônico
             textoNumero.Text = Convert.ToString(contaSelecionada.Numero);
             this.MostraConta(contaSelecionada);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var guilherme = new Cliente("Guilherme");
+
+        }
     }
 }
