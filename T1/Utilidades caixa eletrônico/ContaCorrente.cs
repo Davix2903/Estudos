@@ -9,4 +9,9 @@ namespace Utilidades_caixa_eletrônico
     class ContaCorrente : Conta
     {
     }
+
+    public double CalculaTributo()
+    {
+        return this.Saldo * 0.3;
+    }
 }

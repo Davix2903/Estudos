@@ -37,13 +37,13 @@ namespace Utilidades_caixa_eletrônico
         private void Form1_Load(object sender, EventArgs e)
         {
             contas = new Conta[2];
-            contas[0] = new Conta();
+            contas[0] = new ContaCorrente();
             contas[0].Titular = new Cliente();
             contas[0].Titular.nome = "Vitor";
             contas[0].Numero = 00;
             contas[0].Deposita(50.0);
             
-            contas[1] = new Conta();
+            contas[1] = new ContaCorrente();
             contas[1].Titular = new Cliente();
             contas[1].Titular.nome = "Julio";
             contas[1].Numero = 11;
@@ -80,9 +80,9 @@ namespace Utilidades_caixa_eletrônico
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Conta[] contas = new Conta[2];
-            contas[0] = new Conta();
-            contas[1] = new ContaPoupanca();
+            ContaCorrente[] contas = new ContaCorrente[2];
+            contas[0] = new ContaCorrente();
+            contas[1] = new ContaCorrente();
 
             contas[0].Deposita(10.0);
             contas[1].Deposita(100.0);
@@ -146,7 +146,8 @@ namespace Utilidades_caixa_eletrônico
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var guilherme = new Cliente("Guilherme");
+            ContaCorrente contaCorrente = new ContaCorrente();
+            ContaPoupanca contaPoupanca = new ContaPoupanca();
 
         }
     }

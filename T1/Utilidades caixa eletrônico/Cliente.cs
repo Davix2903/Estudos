@@ -40,15 +40,6 @@ namespace Utilidades_caixa_eletrônico
             this.nome = Nome;
         }
 
-        public bool PodeAbrirContaSozinho
-        {
-            get
-            {
-                var maiorDeIdade = this.idade >= 18;
-                var emancipado = this.documentos.contains("emancipacao");
-                var possuiCPF = !string.IsNullOrEmpty(this.cpf);
-                return (maiorDeIdade || emancipado) && possuiCPF;
-            }
-        }
     }
+    
 }
