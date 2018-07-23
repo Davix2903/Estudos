@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace Utilidades_caixa_eletrônico
 {
-    class ContaInvestimento : Conta, ITributavel
+    interface ITributavel
     {
-
-        public double CalculaTributo()
-        {
-            return this.Saldo * 0.03;
-        }
+        double CalculaTributo();
     }
 }

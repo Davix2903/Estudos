@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Utilidades_caixa_eletrônico
 {
-    class ContaPoupanca : Conta
+    class ContaPoupanca : Conta, ITributavel
     {
         public override void Saca(double valor)
         {

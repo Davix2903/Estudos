@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Utilidades_caixa_eletrônico
 {
-    interface Tributavel
+    public class SeguroDeVida : ITributavel
     {
-        double CalculaTributo();
+        public double CalculaTributo()
+        {
+           return 42.0;
+        }
     }
 }

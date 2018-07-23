@@ -10,7 +10,7 @@ namespace Utilidades_caixa_eletrônico
     {
         public double Total { get; private set; }
 
-        public void Acumula(Tributavel cp)
+        public void Acumula(ITributavel cp)
         {
             Total += cp.CalculaTributo();
         }
