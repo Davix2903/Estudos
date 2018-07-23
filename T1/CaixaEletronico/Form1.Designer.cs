@@ -1,4 +1,4 @@
-﻿namespace Utilidades_caixa_eletrônico
+﻿namespace Benner.CaixaEletronico
 {
     partial class Form1
     {
@@ -42,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboTransfere = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoSaldo
@@ -52,6 +51,7 @@
             this.textoSaldo.Name = "textoSaldo";
             this.textoSaldo.Size = new System.Drawing.Size(185, 20);
             this.textoSaldo.TabIndex = 7;
+            this.textoSaldo.TextChanged += new System.EventHandler(this.textoSaldo_TextChanged);
             // 
             // textoNumero
             // 
@@ -60,6 +60,7 @@
             this.textoNumero.Name = "textoNumero";
             this.textoNumero.Size = new System.Drawing.Size(185, 20);
             this.textoNumero.TabIndex = 8;
+            this.textoNumero.TextChanged += new System.EventHandler(this.textoNumero_TextChanged);
             // 
             // textoValor
             // 
@@ -136,6 +137,7 @@
             this.textotitulare.Name = "textotitulare";
             this.textotitulare.Size = new System.Drawing.Size(184, 20);
             this.textotitulare.TabIndex = 18;
+            this.textotitulare.TextChanged += new System.EventHandler(this.textotitulare_TextChanged_1);
             // 
             // label5
             // 
@@ -176,22 +178,11 @@
             this.comboTransfere.TabIndex = 23;
             this.comboTransfere.SelectedIndexChanged += new System.EventHandler(this.comboTransfere_SelectedIndexChanged);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(327, 31);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Tributos";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 484);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.comboTransfere);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -229,7 +220,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboTransfere;
-        private System.Windows.Forms.Button button4;
     }
 }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Utilidades_caixa_eletrônico
+namespace Benner.CaixaEletronico.Usuario
 {
     public class Cliente
     {
@@ -38,6 +38,12 @@ namespace Utilidades_caixa_eletrônico
         public Cliente(string Nome)
         {
             this.nome = Nome;
+        }
+
+        public override bool Equals(object obj)
+        {
+            Cliente cliente = (Cliente)obj;
+            return.this.rg.Equals(cliente.rg);
         }
 
     }

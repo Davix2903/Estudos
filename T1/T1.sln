@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primeiro Projeto", "Primeiro Projeto\Primeiro Projeto.csproj", "{763066F6-5F49-43E5-BD80-FB3085B167DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caixa Eletrônico", "Caixa Eletrônico\Caixa Eletrônico.csproj", "{071CEEDF-55FD-4F54-AB3D-811009CF0EFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "Caixa Eletrônico\Banco.csproj", "{071CEEDF-55FD-4F54-AB3D-811009CF0EFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bhaskara", "Bhaskara\Bhaskara.csproj", "{0D763750-E509-484E-8C2F-E1D60DCFCBEF}"
 EndProject
@@ -27,11 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "☆ Mão na Massa", "Mão n
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mão na Massa 02", "Mão na Massa 02\Mão na Massa 02.csproj", "{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilidades caixa eletrônico", "Utilidades caixa eletrônico\Utilidades caixa eletrônico.csproj", "{7B29D846-2A88-4269-98F6-E0D5A5F39414}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio Votando", "Desafio Votando\Desafio Votando.csproj", "{D32293C4-20A6-446F-8B62-4E0D03DC66E5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imposto", "Imposto\Imposto.csproj", "{053DA4D4-F1A5-49BE-80E4-B0D343C83C7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEletrônico", "CaixaEletronico\CaixaEletrônico.csproj", "{7B29D846-2A88-4269-98F6-E0D5A5F39414}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,10 +87,6 @@ Global
 		{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2F6BB97-93E4-42DF-98F5-2A7D57E217FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D32293C4-20A6-446F-8B62-4E0D03DC66E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D32293C4-20A6-446F-8B62-4E0D03DC66E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D32293C4-20A6-446F-8B62-4E0D03DC66E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -99,6 +95,10 @@ Global
 		{053DA4D4-F1A5-49BE-80E4-B0D343C83C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{053DA4D4-F1A5-49BE-80E4-B0D343C83C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{053DA4D4-F1A5-49BE-80E4-B0D343C83C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

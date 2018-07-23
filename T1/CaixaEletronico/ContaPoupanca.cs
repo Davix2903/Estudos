@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Utilidades_caixa_eletrônico
+namespace Benner.CaixaEletronico.Contas
 {
     class ContaPoupanca : Conta, ITributavel
     {

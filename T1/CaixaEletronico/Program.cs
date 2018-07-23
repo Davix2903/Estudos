@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Utilidades_caixa_eletrônico
+namespace Benner.CaixaEletronico
 {
     static class Program
     {

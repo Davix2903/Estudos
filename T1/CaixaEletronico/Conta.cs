@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Benner.CaixaEletronico;
+using Benner.CaixaEletronico.Usuario;
 
-namespace Utilidades_caixa_eletrônico
+namespace Benner.CaixaEletronico.Contas
 {
-    public class Conta
+    public abstract class Conta
     {
         public int Numero { get; set; }
 
@@ -24,14 +26,8 @@ namespace Utilidades_caixa_eletrônico
 
         public Conta() { }
 
-        public virtual void Saca(double valor)
-        {
-            if (valor <= Saldo)
-            {
-
-                this.Saldo -= valor;
-            }
-        }
+        public abstract void Saca(double valor);
+        
 
         public void Deposita(double valor)
         {

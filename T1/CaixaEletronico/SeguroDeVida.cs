@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Utilidades_caixa_eletrônico
+namespace Benner.CaixaEletronico
 {
-    class ContaInvestimento : Conta, ITributavel
+    public class SeguroDeVida : ITributavel
     {
-
         public double CalculaTributo()
         {
-            return this.Saldo * 0.03;
+           return 42.0;
         }
     }
 }

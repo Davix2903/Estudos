@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Benner.CaixaEletronico.Contas;
 
-namespace Utilidades_caixa_eletrônico
+namespace Benner.CaixaEletronico
 {
     class TotalizadorDeContas
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Utilidades_caixa_eletrônico.Properties
+namespace CaixaEletronico.Properties
 {
 
 
