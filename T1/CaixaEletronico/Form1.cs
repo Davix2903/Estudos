@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Benner.CaixaEletronico.Contas;
 using Benner.CaixaEletronico.Usuario;
+using CaixaEletronico;
 
 namespace Benner.CaixaEletronico
 {
@@ -17,6 +18,7 @@ namespace Benner.CaixaEletronico
         Conta[] contas;
 
         public int quantidadeDeContas;
+        //private int i;
 
         private Conta BuscaContaSelecionada()
         {
@@ -41,7 +43,7 @@ namespace Benner.CaixaEletronico
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            contas = new Conta[2];
+            contas = new Conta[10];
             contas[0] = new ContaCorrente();
             contas[0].Titular = new Cliente();
             contas[0].Titular.nome = "Vitor";
@@ -54,17 +56,19 @@ namespace Benner.CaixaEletronico
             contas[1].Numero = 11;
             contas[1].Deposita(135.0);
 
-            for (int i = 0; i < contas.Length; i++)
+            foreach (var c in contas)
             {
-                comboContas.Items.Add(contas[i].Titular.nome);
-                comboTransfere.Items.Add(contas[i].Titular.nome);
-
+                comboContas.Items.Add(c.Titular.nome);
+                comboTransfere.Items.Add(c.Titular.nome);
             }
-            //foreach (var c in contas)
+
+            //for (int i = 0; i < contas.Length; i++)
             //{
-            //    comboContas.Items.Add(c.Titular.nome);
+            //    comboContas.Items.Add(contas[i].Titular.nome);
+            //    comboTransfere.Items.Add(contas[i].Titular.nome);
             //}
-            //this.MostraConta();
+
+            //this.MostraConta(contas[]);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -124,7 +128,8 @@ namespace Benner.CaixaEletronico
         {
             int indiceSelecionado = comboContas.SelectedIndex;
             Conta contaSelecionada = contas[indiceSelecionado];
-            textotitulare.Text = contaSelecionada.Titular.nome;
+
+            textotitulare.Text = Convert.ToString(contaSelecionada.Titular.nome);
             textoSaldo.Text = Convert.ToString(contaSelecionada.Saldo);
             textoNumero.Text = Convert.ToString(contaSelecionada.Numero);
             this.MostraConta(contaSelecionada);
@@ -186,6 +191,29 @@ namespace Benner.CaixaEletronico
         private void textotitulare_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            //Cliente cliente1 = new Cliente("Guilherme");
+            //cliente1.rg = ("1234-5");
+
+            //Cliente cliente2 = new Cliente("Guilherme");
+            //cliente2.rg = ("1234-5");
+            //MessageBox.Show("Iguais? " + cliente1.Equals(cliente2));
+        }
+        public void AdicionaConta(Conta c)
+        {
+            this.contas[this.quantidadeDeContas] = c;
+            this.quantidadeDeContas++;
+
+            comboContas.Items.Add(c.Titular.nome);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CadastroDeContas cadastro = new CadastroDeContas(this);
+            cadastro.ShowDialog();
         }
     }
 }

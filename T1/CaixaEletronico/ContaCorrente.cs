@@ -8,7 +8,7 @@ using Benner.CaixaEletronico.Contas;
 
 namespace Benner.CaixaEletronico.Contas
 {
-    class ContaCorrente : Conta
+    public class ContaCorrente : Conta
     {
         public static int TotalDeContas { get; private set; }
         public ContaCorrente()

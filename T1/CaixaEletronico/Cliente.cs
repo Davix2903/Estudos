@@ -40,11 +40,15 @@ namespace Benner.CaixaEletronico.Usuario
             this.nome = Nome;
         }
 
-        public override bool Equals(object obj)
-        {
-            Cliente cliente = (Cliente)obj;
-            return.this.rg.Equals(cliente.rg);
-        }
+        //public override bool Equals(object obj)
+        //{
+        //    {
+        //    Cliente cliente = (Cliente)obj;
+        //    return this.rg.Equals(cliente.rg);
+        //    }
+           
+                
+        //}
 
     }
     
