@@ -56,10 +56,13 @@ namespace Benner.CaixaEletronico
             contas[1].Numero = 11;
             contas[1].Deposita(135.0);
 
-            foreach (var c in contas)
+            foreach (Conta c in contas)
             {
-                comboContas.Items.Add(c.Titular.nome);
-                comboTransfere.Items.Add(c.Titular.nome);
+                if (c != null)
+                {
+                    comboContas.Items.Add(c.Titular.nome);
+                    comboTransfere.Items.Add(c.Titular.nome);
+                }
             }
 
             //for (int i = 0; i < contas.Length; i++)
@@ -129,7 +132,7 @@ namespace Benner.CaixaEletronico
             int indiceSelecionado = comboContas.SelectedIndex;
             Conta contaSelecionada = contas[indiceSelecionado];
 
-            textotitulare.Text = Convert.ToString(contaSelecionada.Titular.nome);
+            //textotitulare.Text = contaSelecionada.Titular.nome;
             textoSaldo.Text = Convert.ToString(contaSelecionada.Saldo);
             textoNumero.Text = Convert.ToString(contaSelecionada.Numero);
             this.MostraConta(contaSelecionada);
