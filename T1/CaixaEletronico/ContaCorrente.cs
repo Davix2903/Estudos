@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Benner.CaixaEletronico.Usuario;
 using Benner.CaixaEletronico.Contas;
+using Benner.CaixaEletronico;
 
 namespace Benner.CaixaEletronico.Contas
 {

@@ -18,7 +18,6 @@ namespace Benner.CaixaEletronico
         Conta[] contas;
 
         public int quantidadeDeContas;
-        //private int i;
 
         private Conta BuscaContaSelecionada()
         {
@@ -49,12 +48,14 @@ namespace Benner.CaixaEletronico
             contas[0].Titular.nome = "Vitor";
             contas[0].Numero = 00;
             contas[0].Deposita(50.0);
+            quantidadeDeContas++;
 
             contas[1] = new ContaCorrente();
             contas[1].Titular = new Cliente();
             contas[1].Titular.nome = "Julio";
             contas[1].Numero = 11;
             contas[1].Deposita(135.0);
+            quantidadeDeContas++;
 
             foreach (Conta c in contas)
             {
@@ -78,9 +79,9 @@ namespace Benner.CaixaEletronico
         {
             string textoDoValorDoDeposito = textoValor.Text;
             double valorDeposito = Convert.ToDouble(textoDoValorDoDeposito);
-            //Conta contaSelecionada = this.BuscaContaSelecionada();
+            Conta contaSelecionada = this.BuscaContaSelecionada();
             int indiceSelecionado = comboContas.SelectedIndex;
-            Conta contaSelecionada = this.contas[indiceSelecionado];
+            //Conta contaSelecionada = contas[indiceSelecionado];
             contaSelecionada.Deposita(valorDeposito);
             MostraConta(contaSelecionada);
         }
@@ -93,14 +94,14 @@ namespace Benner.CaixaEletronico
             try
             {
                 contaSelecionada.Saca(valorSaque);
-
                 this.MostraConta(contaSelecionada);
                 MessageBox.Show("Dinheiro liberado com sucesso!");
-            }            catch (ArgumentException exception)
+            }
+            catch (ArgumentException)
             {
                 MessageBox.Show("Valor inválido para saque");
             }
-            catch (saldoInsuficienteException exception)
+            catch (saldoInsuficienteException)
             {
                 MessageBox.Show("Saldo insuficiente!");
             }
@@ -131,8 +132,7 @@ namespace Benner.CaixaEletronico
         {
             int indiceSelecionado = comboContas.SelectedIndex;
             Conta contaSelecionada = contas[indiceSelecionado];
-
-            //textotitulare.Text = contaSelecionada.Titular.nome;
+            textotitulare.Text = contaSelecionada.Titular.nome;
             textoSaldo.Text = Convert.ToString(contaSelecionada.Saldo);
             textoNumero.Text = Convert.ToString(contaSelecionada.Numero);
             this.MostraConta(contaSelecionada);
@@ -159,7 +159,14 @@ namespace Benner.CaixaEletronico
             string textoValue = textoValor.Text;
             double valorTransferencia = Convert.ToDouble(textoValor.Text);
 
-            contaSelecionada.Transfere(valorTransferencia, contaDestino);
+            try
+            {
+                contaSelecionada.Transfere(valorTransferencia, contaDestino);
+            } 
+            catch(saldoInsuficienteException)
+            {
+                MessageBox.Show("Saldo insuficiente!");
+            }
 
             this.MostraConta(contaSelecionada);
         }
@@ -217,6 +224,11 @@ namespace Benner.CaixaEletronico
         {
             CadastroDeContas cadastro = new CadastroDeContas(this);
             cadastro.ShowDialog();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
