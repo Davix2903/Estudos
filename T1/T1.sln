@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imposto", "Imposto\Imposto.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEletrônico", "CaixaEletronico\CaixaEletrônico.csproj", "{7B29D846-2A88-4269-98F6-E0D5A5F39414}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "editorDeTexto", "editorDeTexto\editorDeTexto.csproj", "{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B29D846-2A88-4269-98F6-E0D5A5F39414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
