@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaixaEletrônico", "CaixaEl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "editorDeTexto", "editorDeTexto\editorDeTexto.csproj", "{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alura.Loja.Testes.ConsoleApp", "Alura.Loja.Testes.ConsoleApp\Alura.Loja.Testes.ConsoleApp.csproj", "{D59A32D0-B933-45D7-8922-483BF3C08524}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBE48625-2C61-43E2-A4AE-C1F98F95B4A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D59A32D0-B933-45D7-8922-483BF3C08524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59A32D0-B933-45D7-8922-483BF3C08524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59A32D0-B933-45D7-8922-483BF3C08524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59A32D0-B933-45D7-8922-483BF3C08524}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
