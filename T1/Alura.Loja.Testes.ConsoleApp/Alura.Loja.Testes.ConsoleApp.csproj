@@ -169,12 +169,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compra.cs" />
     <Compile Include="EntityEntries.cs" />
     <Compile Include="IProdutoDAO.cs" />
     <Compile Include="LojaContext.cs" />
-    <Compile Include="Migrations\20180727201939_Unidade.cs" />
-    <Compile Include="Migrations\20180727201939_Unidade.designer.cs">
-      <DependentUpon>20180727201939_Unidade.cs</DependentUpon>
+    <Compile Include="Migrations\20180730165941_Inicial.cs" />
+    <Compile Include="Migrations\20180730165941_Inicial.designer.cs">
+      <DependentUpon>20180730165941_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180730170409_Unidade.cs" />
+    <Compile Include="Migrations\20180730170409_Unidade.designer.cs">
+      <DependentUpon>20180730170409_Unidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20180730172102_Compra.cs" />
+    <Compile Include="Migrations\20180730172102_Compra.designer.cs">
+      <DependentUpon>20180730172102_Compra.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\LojaContextModelSnapshot.cs" />
     <Compile Include="Produto.cs" />
@@ -189,5 +198,6 @@
   <ItemGroup>
     <Content Include="ddl-produtos.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
