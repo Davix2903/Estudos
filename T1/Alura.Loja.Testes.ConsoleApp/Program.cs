@@ -15,34 +15,25 @@ namespace Alura.Loja.Testes.ConsoleApp
     {
         static void Main(string[] args)
         {
-            var fulano = new Cliente();
-            fulano.Nome = "Fulaninho de Tal";
-            fulano.EnderecoDeEntrega = new Endereco()
-            {
-                Numero = "100",
-                Rua = "Rua Mexicana",
-                Bairro = "Ruínas",
-                Cidade = "São Paulo"
-            };
-
             using (var contexto = new LojaContext())
             {
+                var promocao = new Promocao();
+                promocao.Descricao = "Queima Total Janeiro 2017";
+                promocao.DataInicio = new DateTime(2017, 1, 1);
+                promocao.DataTermino = new DateTime(2017, 1, 31);
 
+                var produtos = contexto
+                    .Produtos
+                    .Where(p => p.Categoria == "Bebidas")
+                    .ToList();
+
+                foreach (var item in produtos)
+                {
+                    promocao.IncluiProduto(item);
+                }
+
+                contexto.Promocoes.Add(promocao);
             }
-
-            //static void Main(string[] args)
-            //{
-            //    //var promocaoDePascoa = new Promocao();
-            //    //promocaoDePascoa.DataInicio = DateTime.Now;
-            //    //promocaoDePascoa.DataTermino = DateTime.Now.AddMonths(3);
-            //    ////promocaoDePascoa.Produtos.Add(new Produto());
-
-            //    ////using (var contexto = new LojaContext())
-            //    ////{
-            //    ////    //contexto.SaveChanges();
-            //    ////}
-            //}
-
         }
     }
 }

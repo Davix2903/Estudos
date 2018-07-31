@@ -9,5 +9,11 @@ namespace Alura.Loja.Testes.ConsoleApp
         public object DataInicio { get; internal set; }
         public DateTime DataTermino { get; internal set; }
         public IList<PromocaoProduto> Produtos { get; internal set; }
+        public string Descricao { get; internal set; }
+
+        internal void IncluiProduto(Produto item)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
