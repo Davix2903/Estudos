@@ -6,10 +6,11 @@ using System.Web;
 
 namespace CaelumEstoque.Models
 {
-    public class Produto
+    public class produto
     {
         public int Id { get; set; }
 
+        [Required, StringLength(20)]
         public String Nome { get; set; }
 
         public float Preco { get; set; }
