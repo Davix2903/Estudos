@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CaelumEstoque.Models
 {
-    public class produto
+    public class Produto
     {
         public int Id { get; set; }
 

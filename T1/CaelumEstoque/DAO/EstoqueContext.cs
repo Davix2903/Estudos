@@ -9,7 +9,7 @@ namespace CaelumEstoque.DAO
 {
     public class EstoqueContext : DbContext
     {
-        public DbSet<produto> Produtos { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
 
         public DbSet<CategoriaDoProduto> Categorias { get; set; }
 

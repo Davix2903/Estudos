@@ -13,11 +13,11 @@
 <body>
     <div>
         <form action="/Produto/Adiciona" method="post">
-            @Html.ValidationMessage("produto.Invalido");
+            @Html.ValidationMessage("Produto.Invalido")
 
             <label for="nome">Nome:</label>
             <input id="name" name="produto.Nome" />
-            @Html.ValidationMessage("produto.Nome")
+            @Html.ValidationMessage("Produto.Nome")
 
             <hr />
 
@@ -41,15 +41,9 @@
 
                 @foreach (var categoria in ViewBag.Categorias)
                 {
-                    if (categoria.Id.Equals(produto.CategoriaId)
-                                                                        {
-                        <option value="@categoria.Id" selected="selected">@categoria.Nome</option>
-                    }
-
-                    else
-                    {
-                            < option value = "@categoria.Id" selected = "selected" > @categoria.Nome </ option >
-                                                                        }
+                    <option value="@categoria.Id" selected="@categoria.Id.Equals(ViewBag.Produto.CategoriaId)">
+                        @categoria.Nome
+                    </option>
                 }
             </select>
             <hr />

@@ -8,7 +8,7 @@ namespace CaelumEstoque.DAO
 {
     public class ProdutosDAO
     {
-        public void Adiciona(produto produto)
+        public void Adiciona(Produto produto)
         {
             using (var context = new EstoqueContext())
             {
@@ -17,7 +17,7 @@ namespace CaelumEstoque.DAO
             }
         }
 
-        public IList<produto> Lista()
+        public IList<Produto> Lista()
         {
             using (var contexto = new EstoqueContext())
             {
@@ -25,7 +25,7 @@ namespace CaelumEstoque.DAO
             }
         }
 
-        public produto BuscaPorId(int id)
+        public Produto BuscaPorId(int id)
         {
             using (var contexto = new EstoqueContext())
             {
@@ -35,7 +35,7 @@ namespace CaelumEstoque.DAO
             }
         }
 
-        public void Atualiza(produto produto)
+        public void Atualiza(Produto produto)
         {
             using (var contexto = new EstoqueContext())
             {

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IList<CaelumEstoque.Models.Produto>
+
+@{
     Layout = null;
 }
 <table>
@@ -13,6 +15,7 @@
         {
             <tr>
                 <td>@categoria.Id</td>
+
                 <td>@categoria.Nome</td>
             </tr>
         }
