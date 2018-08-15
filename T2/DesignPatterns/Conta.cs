@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class CalculadorDeImpostos
+    public class Conta
     {
-        public void RealizaCalculo(Orcamento orcamento, IImposto imposto)
+        public double Saldo { get; private set; }
+        public void Deposita(double valor)
         {
+            Saldo += valor;
         }
-
     }
 }
