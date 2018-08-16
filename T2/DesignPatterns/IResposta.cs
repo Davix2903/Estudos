@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public interface Investimento
+    interface IResposta
     {
-        double Calcula(Conta conta);
+        void Responde(Requisicao req, Conta conta);
+        IResposta OutraResposta { get; set; }
     }
+
 }

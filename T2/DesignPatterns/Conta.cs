@@ -8,10 +8,20 @@ namespace DesignPatterns
 {
     public class Conta
     {
+        public String Titular { get; private set; }
         public double Saldo { get; private set; }
-        public void Deposita(double valor)
+
+        public Conta(String titular, double saldo)
         {
-            Saldo += valor;
+            this.Titular = titular;
+            this.Saldo = saldo;
         }
+    }
+
+    enum Formato
+    {
+        XML,
+        CSV,
+        PORCENTO
     }
 }

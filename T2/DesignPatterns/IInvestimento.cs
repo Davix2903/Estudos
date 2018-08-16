@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public interface Investimento
+    public interface IInvestimento
     {
         double Calcula(Conta conta);
     }
 }
+
