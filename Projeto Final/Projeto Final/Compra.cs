@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Projeto_Final
 {
-    public class Cliente : Usuarios
+    public class Compra
     {
-        public Endereco Endereco
+        public FormaDePagamento FormaDePagamento
         {
-            get => default(Endereco);
+            get => default(FormaDePagamento);
             set
             {
             }

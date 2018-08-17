@@ -5,7 +5,8 @@ using System.Text;
 
 namespace Projeto_Final
 {
-    public class Cliete
+    public class FormaDePagamento
     {
+        private int CreditoOuDebito;
     }
 }

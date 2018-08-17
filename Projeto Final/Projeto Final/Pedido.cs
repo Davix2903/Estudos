@@ -5,11 +5,13 @@ using System.Text;
 
 namespace Projeto_Final
 {
-    public class Cliente : Usuarios
+    public class Pedido
     {
-        public Endereco Endereco
+        List<ItensPedido> Itens;
+
+        public ItensPedido ItensPedido
         {
-            get => default(Endereco);
+            get => default(ItensPedido);
             set
             {
             }
