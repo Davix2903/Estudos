@@ -55,7 +55,7 @@
     <Compile Include="ICCC.cs" />
     <Compile Include="ICMS.cs" />
     <Compile Include="IHIT.cs" />
-    <Compile Include="IImposto.cs" />
+    <Compile Include="Imposto.cs" />
     <Compile Include="IKCV.cs" />
     <Compile Include="Investimento.cs" />
     <Compile Include="ISS.cs" />

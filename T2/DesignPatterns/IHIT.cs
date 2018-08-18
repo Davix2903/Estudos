@@ -8,7 +8,7 @@ namespace DesignPatterns
 {
     class IHIT : TemplateDeImpostoCondicional
     {
-        protected override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
+        public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {
             IList<String> noOrcamento = new List<String>();
 
@@ -17,16 +17,18 @@ namespace DesignPatterns
                 if (noOrcamento.Contains(item.Nome))
                     return true;
                 else
-                    noOrcamento.Add(item.getNome);
+                    noOrcamento.Add(item.Nome);
             }
 
             return false;
         }
-        protected override double MaximaTaxacao(Orcamento orcamento)
+
+        public override double MaximaTaxacao(Orcamento orcamento)
         {
             return orcamento.Valor * 0.13 + 100;
         }
-        protected override double MinimaTaxacao(Orcamento orcamento)
+
+        public override double MinimaTaxacao(Orcamento orcamento)
         {
             return orcamento.Valor * (0.01 * orcamento.Itens.Count);
         }
