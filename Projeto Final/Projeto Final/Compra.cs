@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 
@@ -7,12 +8,7 @@ namespace Projeto_Final
 {
     public class Compra
     {
-        public FormaDePagamento FormaDePagamento
-        {
-            get => default(FormaDePagamento);
-            set
-            {
-            }
-        }
+        [Required]
+        public FormaDePagamento FormaDePagamento { get; set; }
     }
 }

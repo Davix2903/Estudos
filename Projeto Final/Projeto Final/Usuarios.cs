@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Projeto_Final
 {
-    public class Usuarios
+    public class Usuarios 
     {
     }
 }

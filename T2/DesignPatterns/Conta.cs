@@ -10,6 +10,8 @@ namespace DesignPatterns
     {
         public String Titular { get; private set; }
         public double Saldo { get; private set; }
+        public int Valor { get; internal set; }
+        public object DataAbertura { get; internal set; }
 
         public Conta(String titular, double saldo)
         {

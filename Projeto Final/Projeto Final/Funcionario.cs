@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Projeto_Final
 {
-    public class Cliente : Usuarios
+    public class Funcionario : Usuarios
     {
         [Required]
         [MinLength(5)]
@@ -27,8 +27,5 @@ namespace Projeto_Final
         [MinLength(8)]
         [MaxLength(25)]
         public int Senha { get; set; }
-
-        [Required]
-        public Endereco Endereco { get; set; }
     }
 }

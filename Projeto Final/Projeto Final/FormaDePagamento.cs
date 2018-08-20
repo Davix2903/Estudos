@@ -7,6 +7,10 @@ namespace Projeto_Final
 {
     public class FormaDePagamento
     {
-        private int CreditoOuDebito;
+        public int CreditoOuDebitoPresencial { get; set; }
+
+        public int DinheiroPresencial { get; set; }
+
+        public int CreditoVirtual { get; set; }
     }
 }
