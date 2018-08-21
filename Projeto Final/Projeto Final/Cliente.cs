@@ -14,9 +14,7 @@ namespace Projeto_Final
         public string NomeCompleto { get; set; }
 
         [Required]
-        [MinLength(10)]
-        [MaxLength(10)]
-        public string DataDeNascimento { get; set; }
+        public DateTime DataDeNascimento { get; set; }
 
         [Required]
         [MinLength(9)]
@@ -26,9 +24,11 @@ namespace Projeto_Final
         [Required]
         [MinLength(8)]
         [MaxLength(25)]
-        public int Senha { get; set; }
+        public String Senha { get; set; }
 
         [Required]
         public Endereco Endereco { get; set; }
+
+        public int EnderecoId { get; set; }
     }
 }
