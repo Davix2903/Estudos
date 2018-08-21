@@ -8,23 +8,25 @@ namespace DesignPatterns
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(String[] args)
         {
-            Orcamento reforma = new Orcamento(500);
+            NotaFiscalBuilder criador = new NotaFiscalBuilder();
+            criador
+                .ParaEmpresa("Pizzaria Rio Claro")
+                .ComCnpj("123")
+                .ComItem(new ItemDaNota("item 1", 100.0))
+                .ComItem(new ItemDaNota("item 2", 200.0))
+                .NaDataAtual()
+                .ComObservacoes("Uma Obs qualquer");
 
-            Console.WriteLine(reforma.Valor);
+            criador.AdicionaAcao(new EnviadorDeEmail());
+            criador.AdicionaAcao(new EnviadorDeSms());
+            criador.AdicionaAcao(new NotaFiscalDAO());
 
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
+            NotaFiscal nf = criador.Constroi();
 
-            reforma.Aprova();
-
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
-
-            reforma.Finaliza();
-
-            reforma.AplicaDescontoExtra();
+            Console.WriteLine(nf.ValorBruto);
+            Console.WriteLine(nf.Impostos);
 
             Console.ReadKey();
         }

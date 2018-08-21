@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns
 {
-    public class Finalizado
+    public class Finalizado : EstadoDeUmOrcamento
     {
         public void AplicaDescontoExtra(Orcamento orcamento)
         {
