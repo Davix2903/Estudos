@@ -28,15 +28,15 @@ namespace Solid.Cap04
             throw new NotImplementedException();
         }
 
-        public AdicionaPagamento(Pagamento pagamento)
-        {
-            this.Pagamentos.Add(pagamento);
+        //public AdicionaPagamento(Pagamento pagamento)
+        //{
+        //    this.Pagamentos.Add(pagamento);
 
-            if(valorTotalDosPagamentos >= Valor)
-            {
-                this.Pago = true;
-            }
-        }
+        //    if(valorTotalDosPagamentos >= Valor)
+        //    {
+        //        this.Pago = true;
+        //    }
+        //}
 
         private double valorTotalDosPagamentos()
         {
