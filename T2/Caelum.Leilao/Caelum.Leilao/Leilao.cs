@@ -16,7 +16,15 @@ namespace Caelum.Leilao
 
         public void Propoe(Lance lance)
         {
+            if (Lances.Count == 0 || !ultimoLanceDado().Usuario.Equals(lance.Usuario))
+            {
             Lances.Add(lance);
+            }
+        }
+
+        private Lance ultimoLanceDado()
+        {
+           return Lances[Lances.Count - 1];          
         }
 
     }
