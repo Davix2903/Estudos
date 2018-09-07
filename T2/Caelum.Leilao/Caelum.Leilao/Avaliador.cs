@@ -22,7 +22,7 @@ namespace Caelum.Leilao
                 }
                 if (lance.Valor < menorDeTodos)
                 {
-                    menorDeTodos = lance.Valor;
+                    menorDeTodos = lance.Valor; 
                 }
             }
             pegaOsMaioresNo(leilao);

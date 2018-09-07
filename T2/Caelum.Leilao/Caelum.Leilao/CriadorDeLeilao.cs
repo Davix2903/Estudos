@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace Caelum.Leilao
 {
-    class CriadorDeLeilao
+    public class CriadorDeLeilao
     {
+        private Leilao leilao;
+
+        public CriadorDeLeilao Para(String descricao)
+        {
+            this.leilao = new Leilao(descricao);
+            return this;
+        }
+
+        public CriadorDeLeilao Lance(Usuario usuario, double valor)
+        {
+            leilao.Propoe(new Lance(usuario, valor));
+            return this;
+        }
+
+        public Leilao Constroi()
+        {
+            return leilao;
+        }
     }
 }
