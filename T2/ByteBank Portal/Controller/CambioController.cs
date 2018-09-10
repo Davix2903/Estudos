@@ -1,9 +1,4 @@
 ﻿using ByteBank.Service.Cambio;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ByteBank_Portal.Controller
 {
@@ -18,6 +13,7 @@ namespace ByteBank_Portal.Controller
 
         public string MXN()
         {
+            var valorFinal = _cambioService.Calcular("MXN", "BRL", 1);
             return null;
         }
 
