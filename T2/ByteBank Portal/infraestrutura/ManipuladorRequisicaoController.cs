@@ -9,9 +9,13 @@ using System.Threading.Tasks;
 
 namespace ByteBank.Portal.Infraestrutura
 {
-    public class ManipuladorRequisicaoController
+    public class ManipuladorRequisicaoControlador
     {
         private readonly ActionBinder _actionBinder = new ActionBinder();
+
+        public ManipuladorRequisicaoControlador()
+        {
+        }
 
         public void Manipular(HttpListenerResponse resposta, string path)
         {

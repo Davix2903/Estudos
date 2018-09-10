@@ -43,8 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\CambioController.cs" />
-    <Compile Include="infraestrutura\Utilidades.cs" />
-    <Compile Include="infraestrutura\WebApplication.cs" />
+    <Compile Include="Infraestrutura\Binding\ActionBinder.cs" />
+    <Compile Include="Infraestrutura\Binding\ActionBindInfo.cs" />
+    <Compile Include="Infraestrutura\Binding\ArgumentoNomeValor.cs" />
+    <Compile Include="Infraestrutura\ControllerBase.cs" />
+    <Compile Include="Infraestrutura\ManipuladorRequisicaoArquivo.cs" />
+    <Compile Include="Infraestrutura\ManipuladorRequisicaoController.cs" />
+    <Compile Include="Infraestrutura\Utilidades.cs" />
+    <Compile Include="Infraestrutura\WebApplication.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,6 +65,12 @@
     <EmbeddedResource Include="View\Cartoes\Credito.html" />
     <EmbeddedResource Include="View\Cartoes\Debito.html" />
     <EmbeddedResource Include="View\Home\Index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ByteBank.Service\ByteBank.Service.csproj">
+      <Project>{D73890FC-EEDB-4CAB-AEA4-9FB72D48C28E}</Project>
+      <Name>ByteBank.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

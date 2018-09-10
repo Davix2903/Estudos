@@ -1,11 +1,11 @@
-﻿using System;
+﻿using ByteBank.Portal.Infraestrutura;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ByteBank_Portal.infraestrutura;
 
-namespace ByteBank_Portal
+namespace ByteBank.Portal
 {
     class Program
     {

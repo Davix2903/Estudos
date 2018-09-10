@@ -48,7 +48,7 @@ namespace ByteBank.Portal.Infraestrutura
             }
             else
             {
-                var manipulador = new ManipuladorRequisicaoController();
+                var manipulador = new ManipuladorRequisicaoControlador();
                 manipulador.Manipular(resposta, path);
             }
 
